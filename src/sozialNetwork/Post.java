@@ -55,13 +55,14 @@ public class Post {
 		this.likes = likes;
 	}
 
-
-	@Override
-	public String toString() {
-		return "Post [Username=" + Username + ", timestamp=" + timestamp + ", comments=" + comments + ", likes=" + likes
-				+ ", getUsername()=" + getUsername() + ", getTimestamp()=" + getTimestamp() + ", getComments()="
-				+ getComments() + ", getLikes()=" + getLikes() + ", getClass()=" + getClass() + ", hashCode()="
-				+ hashCode() + ", toString()=" + super.toString() + "]";
+	public void likePost() {
+	    this.likes++;
 	}
+	public void unlikePost() {
+	    if (this.likes > 0) {
+	        this.likes--;
+	    }
+	}
+
 	
 }
