@@ -2,10 +2,13 @@ package sozialNetwork;
 
 public class Message extends Post{
 	private String text;
-	public Message(String username, long timestamp, String comments, int likes, String text) {
-		super(username, timestamp, comments, likes);
+	
+		
+	public Message(String username, long timestamp, int likes, String text) {
+		super(username, timestamp, likes);
 		this.text = text;
 	}
+	
 	public String getText() {
 		return text;
 	}

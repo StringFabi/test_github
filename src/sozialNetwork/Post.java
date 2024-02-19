@@ -1,17 +1,20 @@
 package sozialNetwork;
 
+import java.util.ArrayList;
+
 public class Post {
 	private String Username;
 	private long timestamp;
-	private String comments;
+	private ArrayList <String> comments;
 	private int likes;
+	private boolean isLiked;
 	
 	
-	public Post(String username, long timestamp, String comments, int likes) {
+	public Post(String username, long timestamp, int likes) {
 		super();
 		Username = username;
 		this.timestamp = timestamp;
-		this.comments = comments;
+		this.comments = new ArrayList<String>();
 		this.likes = likes;
 	}
 
@@ -36,12 +39,12 @@ public class Post {
 	}
 
 
-	public String getComments() {
+	public ArrayList<String> getComments() {
 		return comments;
 	}
 
 
-	public void setComments(String comments) {
+	public void setComments(ArrayList<String> comments) {
 		this.comments = comments;
 	}
 
@@ -63,6 +66,7 @@ public class Post {
 	        this.likes--;
 	    }
 	}
-
+	
+	
 	
 }
