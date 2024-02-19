@@ -1,6 +1,7 @@
 package sozialNetwork;
 
 import java.util.ArrayList;
+import java.util.concurrent.TimeUnit;
 
 public class Post {
 	private String Username;
@@ -65,7 +66,26 @@ public class Post {
 	        this.likes--;
 	    }
 	}
-	
+	public String getTimeSincePost() {
+        long currentTime = System.currentTimeMillis();
+        long diff = currentTime - timestamp;
+ 
+        long seconds = TimeUnit.MILLISECONDS.toSeconds(diff);
+        long minutes = TimeUnit.MILLISECONDS.toMinutes(diff) % 60;
+        long hours = TimeUnit.MILLISECONDS.toHours(diff) % 24;
+        long days = TimeUnit.MILLISECONDS.toDays(diff);
+ 
+        if (days > 0) {
+            return "vor " + days + " Tag(en)";
+        } else if (hours > 0) {
+            return "vor " + hours + " Stunde(n)";
+        } else if (minutes > 0) {
+            return "vor " + minutes + " Minute(n)";
+        } else {
+            return "vor " + seconds + " Sekunde(n)";
+        }
+    }
+
 	
 	
 }
