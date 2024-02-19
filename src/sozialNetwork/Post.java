@@ -7,7 +7,6 @@ public class Post {
 	private long timestamp;
 	private ArrayList <String> comments;
 	private int likes;
-	private boolean isLiked;
 	
 	
 	public Post(String username, long timestamp, int likes) {
