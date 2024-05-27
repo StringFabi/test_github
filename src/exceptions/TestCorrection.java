@@ -11,7 +11,7 @@ public class TestCorrection {
 
 	public static void main(String[] args) {
 		try {
-			double ergebnis = divide(2,4);
+			double ergebnis = divide(2,0);
 			System.out.println("Ergebnis : " + ergebnis);
 		} catch (ArithmeticException e){
 			System.out.println("Darf nicht durch 0 Dividieren");
